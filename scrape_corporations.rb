@@ -8,7 +8,7 @@ end
 # logger作成
 current_time = Time.now.getlocal.to_s
 current_time.gsub!(/ /, "").gsub!(/:.*/, "")
-logger = Logger.new("log/#{current_time}-#{ARGV[0]}.log")
+logger = Logger.new("log/#{current_time}-#{ARGV[0]}法人.log")
 
 options = Selenium::WebDriver::Chrome::Options.new
 options.add_argument('-headless')

@@ -5,7 +5,7 @@ def read_file(file_name)
   count = 0
   File.open(file_name, "r") do |f|
     f.each_line do |line|
-      if count % 8 == 0 && line
+      if count % 9 == 0 && line
         original_data << []
       end
       if line.include?("スクレイピングできません")
@@ -25,7 +25,7 @@ def create_sheet(sheet_name, original_data)
   # 新規作成
   book = Spreadsheet::Workbook.new
   sheet = book.create_worksheet(name: "1")
-  sheet.row(0).concat %w{地域 名前 登録番号 所属行政書士会 属性 登録年月日 事務所の名称 事務所所在地 事務所電話番号 特定行政書士 主な取り扱い業}
+  sheet.row(0).concat %w{法人名 法人番号 事務所法人番号 所属行政書士会 設立年月日 事務所の名称 事務所所在地 事務所電話番号 電話番号2}
   
   # 事務所の重複を省く
   # 税理士の名前（上の名前or下の名前）が税理士事務所に含まれる
@@ -62,3 +62,4 @@ create_sheet(output_sheet_name, original_data)
 # 事務所の名称
 # 事務所所在地
 # 事務所電話番号
+# 電話番号2
