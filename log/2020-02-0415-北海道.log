@@ -1,0 +1,5 @@
+# Logfile created on 2020-02-04 15:03:26 +0900 by logger.rb/66358
+I, [2020-02-04T15:06:53.053146 #49931]  INFO -- : page 1 is done
+I, [2020-02-04T15:10:12.401871 #49931]  INFO -- : page 2 is done
+I, [2020-02-04T15:29:21.653994 #78440]  INFO -- : page 1 is done
+I, [2020-02-04T15:29:21.689196 #78440]  INFO -- : 北海道 is done. Maybe it's successed or maybe not

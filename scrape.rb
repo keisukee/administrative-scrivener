@@ -11,7 +11,7 @@ current_time.gsub!(/ /, "").gsub!(/:.*/, "")
 logger = Logger.new("log/#{current_time}-#{ARGV[0]}.log")
 
 options = Selenium::WebDriver::Chrome::Options.new
-# options.add_argument('-headless')
+options.add_argument('-headless')
 driver = Selenium::WebDriver.for :chrome, options: options
 driver.get url
 
