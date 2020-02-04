@@ -10,9 +10,9 @@ current_time = Time.now.getlocal.to_s
 current_time.gsub!(/ /, "").gsub!(/:.*/, "")
 logger = Logger.new("log/#{current_time}-#{ARGV[0]}.log")
 
-options = Selenium::WebDriver::Firefox::Options.new
+options = Selenium::WebDriver::Chrome::Options.new
 # options.add_argument('-headless')
-driver = Selenium::WebDriver.for :firefox, options: options
+driver = Selenium::WebDriver.for :chrome, options: options
 driver.get url
 
 # 「同意して検索する」のボタンを押す処理
