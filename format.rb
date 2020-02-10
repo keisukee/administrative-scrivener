@@ -41,12 +41,11 @@ def create_sheet(sheet_name, original_data)
   end
   index_to_show.each_with_index do |value, index|
     original_data[value].each_with_index do |single_data, j|
-      sheet[index + 1, j] = single_data
-      # if single_data == 'xxx'
-      #   sheet[index + 1, j] = ''
-      # else
-      #   sheet[index + 1, j] = single_data
-      # end
+      if single_data == 'xxx'
+        sheet[index + 1, j] = ''
+      else
+        sheet[index + 1, j] = single_data
+      end
     end
   end
   book.write(sheet_name)
